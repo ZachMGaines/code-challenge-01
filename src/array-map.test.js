@@ -15,3 +15,9 @@ test('it turns the array to a string', () => {
   const actual = stringNumbers(input);
   expect(actual).toEqual(['2', '5', '10']);
 });
+
+test('it capatalizes the names', () => {
+  const input = ['john', 'JACOB', 'jinGleHeimer', 'schmidt'];
+  const actual = capitalizeNames(input);
+  expect(actual).toEqual(['John', 'Jacob', 'Jingleheimer', 'Schmidt']);
+});
