@@ -23,3 +23,15 @@ export function namesOnly(arr) {
     return happy;
   });
 }
+
+export function makeStrings(arr) {
+  return arr.map(item => {
+    return `${item.name} ${item.age < 18 ? 'is under age!!' : 'can go to The Matrix'}`;
+  });
+}
+
+export function makeHeader(arr) {
+  return arr.map(item => {
+    return `<h1>${item.name}</h1><h2>${item.age}</h2>`;
+  });
+}
