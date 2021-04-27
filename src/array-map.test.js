@@ -1,4 +1,4 @@
-import { doubleNumbers, stringNumbers } from './array-map';
+import { doubleNumbers, stringNumbers, capitalizeNames, namesOnly } from './array-map';
 
 
 
@@ -20,4 +20,38 @@ test('it capatalizes the names', () => {
   const input = ['john', 'JACOB', 'jinGleHeimer', 'schmidt'];
   const actual = capitalizeNames(input);
   expect(actual).toEqual(['John', 'Jacob', 'Jingleheimer', 'Schmidt']);
+});
+
+test('names show only', () => {
+  const input = [
+    {
+      name: 'Angelina Jolie',
+      age: 80
+    },
+    {
+      name: 'Eric Jones',
+      age: 2
+    },
+    {
+      name: 'Paris Hilton',
+      age: 5
+    },
+    {
+      name: 'Kayne West',
+      age: 16
+    },
+    {
+      name: 'Bob Ziroll',
+      age: 100
+    }
+  ];
+  const actual = namesOnly(input);
+  expect(actual).toEqual([
+    'Angelina Jolie',
+    'Eric Jones',
+    'Paris Hilton',
+    'Kayne West',
+    'Bob Ziroll'
+  ]);
+
 });

@@ -13,10 +13,13 @@ export function stringNumbers(arr) {
 };
 
 export function capitalizeNames(arr) {
+  return arr.map(item =>
+    item[0].toUpperCase() + item.slice(1).toLowerCase());
+};
+
+export function namesOnly(arr) {
   return arr.map(item => {
-
-    const hello = item.charAt(0).slice(0, 4, 9, 21);
-
-    return hello.toUpperCase();
+    const happy = item.name;
+    return happy;
   });
 }
